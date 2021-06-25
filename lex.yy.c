@@ -351,8 +351,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 3
-#define YY_END_OF_BUFFER 4
+#define YY_NUM_RULES 11
+#define YY_END_OF_BUFFER 12
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -360,10 +360,11 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[12] =
+static const flex_int16_t yy_accept[31] =
     {   0,
-        0,    0,    4,    2,    3,    2,    0,    0,    0,    1,
-        0
+        0,    0,   12,   10,    1,    9,    9,    9,    9,    9,
+        9,    9,    9,    9,    9,    9,    9,    3,    4,    9,
+        9,    9,    9,    9,    8,    5,    6,    7,    2,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
@@ -374,14 +375,14 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        1,    1,    1,    1,    1,    1,    4,    5,    6,    7,
 
-        1,    1,    1,    1,    3,    1,    1,    1,    1,    4,
-        1,    5,    1,    1,    1,    6,    7,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        8,    3,    3,    3,    3,    9,    3,    3,    3,   10,
+       11,   12,    3,   13,    3,    3,   14,   15,    3,    3,
+        3,    3,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -398,33 +399,44 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[8] =
+static const YY_CHAR yy_meta[16] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1
+        1,    1,    2,    2,    2,    2,    2,    2,    2,    2,
+        2,    2,    2,    2,    2
     } ;
 
-static const flex_int16_t yy_base[13] =
+static const flex_int16_t yy_base[33] =
     {   0,
-        0,    2,   10,   11,   11,    5,    3,    0,    0,   11,
-       11,    0
+        0,    2,   30,   31,   31,    0,   22,   17,   16,   13,
+       17,    0,    0,   14,    9,    2,    9,    0,    0,   12,
+       10,    4,    1,    2,    0,    0,    0,    0,    0,   31,
+       17,    3
     } ;
 
-static const flex_int16_t yy_def[13] =
+static const flex_int16_t yy_def[33] =
     {   0,
-       12,   12,   11,   11,   11,   11,   11,   11,   11,   11,
-        0,   11
+       31,   31,   30,   30,   30,   32,   32,   32,   32,   32,
+       32,   32,   32,   32,   32,   32,   32,   32,   32,   32,
+       32,   32,   32,   32,   32,   32,   32,   32,   32,    0,
+       30,   30
     } ;
 
-static const flex_int16_t yy_nxt[19] =
+static const flex_int16_t yy_nxt[47] =
     {   0,
-        4,    5,    6,    5,    6,   10,    9,    8,    7,   11,
-        3,   11,   11,   11,   11,   11,   11,   11
+        4,    5,    4,    5,   12,    7,   29,    8,   18,   22,
+       28,    9,   23,   10,   19,   27,   11,    6,    6,   26,
+       25,   24,   21,   20,   17,   16,   15,   14,   13,   30,
+        3,   30,   30,   30,   30,   30,   30,   30,   30,   30,
+       30,   30,   30,   30,   30,   30
     } ;
 
-static const flex_int16_t yy_chk[19] =
+static const flex_int16_t yy_chk[47] =
     {   0,
-       12,    1,    1,    2,    2,    9,    8,    7,    6,    3,
-       11,   11,   11,   11,   11,   11,   11,   11
+        1,    1,    2,    2,   32,    2,   24,    2,   13,   16,
+       23,    2,   16,    2,   13,   22,    2,   31,   31,   21,
+       20,   17,   15,   14,   11,   10,    9,    8,    7,    3,
+       30,   30,   30,   30,   30,   30,   30,   30,   30,   30,
+       30,   30,   30,   30,   30,   30
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -441,9 +453,26 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "simple.l"
-/*Simple program to copy standard input to output*/
-#line 447 "lex.yy.c"
+#line 1 "symbolTable.l"
+/*Word recognizer with symbol table.*/
+#line 3 "symbolTable.l"
+enum{
+    LOOKUP = 0,
+    VERB,
+    ADJ,
+    ADV,
+    NOUN,
+    PREP,
+    PRON,
+    CONJ,
+};
+
+int state;
+
+int add_word(int type, char *word);
+int lookup_word(char *word);
+#line 475 "lex.yy.c"
+#line 476 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -623,6 +652,9 @@ extern int yylex (void);
 #endif
 
 #define YY_RULE_SETUP \
+	if ( yyleng > 0 ) \
+		YY_CURRENT_BUFFER_LVALUE->yy_at_bol = \
+				(yytext[yyleng - 1] == '\n'); \
 	YY_USER_ACTION
 
 /** The main scanner function which does all the work.
@@ -660,9 +692,9 @@ YY_DECL
 		}
 
 	{
-#line 3 "simple.l"
+#line 20 "symbolTable.l"
 
-#line 666 "lex.yy.c"
+#line 698 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -677,6 +709,7 @@ YY_DECL
 		yy_bp = yy_cp;
 
 		yy_current_state = (yy_start);
+		yy_current_state += YY_AT_BOL();
 yy_match:
 		do
 			{
@@ -689,13 +722,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 12 )
+				if ( yy_current_state >= 31 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 11 );
+		while ( yy_base[yy_current_state] != 31 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -720,17 +753,77 @@ do_action:	/* This label is used only to access EOF actions. */
 			goto yy_find_action;
 
 case 1:
+/* rule 1 can match eol */
 YY_RULE_SETUP
-#line 4 "simple.l"
-{ printf("output"); }
+#line 21 "symbolTable.l"
+{ state = LOOKUP; }
 	YY_BREAK
 case 2:
-#line 6 "simple.l"
+YY_RULE_SETUP
+#line 22 "symbolTable.l"
+{ state = VERB;}
+	YY_BREAK
 case 3:
-#line 6 "simple.l"
+YY_RULE_SETUP
+#line 23 "symbolTable.l"
+{ state = ADJ;}
+	YY_BREAK
+case 4:
+YY_RULE_SETUP
+#line 24 "symbolTable.l"
+{ state = ADV;}
+	YY_BREAK
+case 5:
+YY_RULE_SETUP
+#line 25 "symbolTable.l"
+{ state = NOUN;}
+	YY_BREAK
+case 6:
+YY_RULE_SETUP
+#line 26 "symbolTable.l"
+{ state = PREP;}
+	YY_BREAK
+case 7:
+YY_RULE_SETUP
+#line 27 "symbolTable.l"
+{ state = PRON;}
+	YY_BREAK
+case 8:
+YY_RULE_SETUP
+#line 28 "symbolTable.l"
+{ state = CONJ;}
+	YY_BREAK
+case 9:
+YY_RULE_SETUP
+#line 30 "symbolTable.l"
+{
+    if(state != LOOKUP){
+        add_word(state, yytext);
+    } else{
+        switch(lookup_word(yytext)){
+            case VERB: printf("%s: verb.\n",yytext);break;
+            case ADJ: printf("%s: adjective.\n",yytext);break;
+            case ADV: printf("%s: adverb.\n",yytext);break;
+            case NOUN: printf("%s: noun.\n",yytext);break;
+            case PREP: printf("%s: preposition.\n",yytext);break;
+            case PRON: printf("%s: pronoun.\n",yytext);break;
+            case CONJ: printf("%s: conjunction.\n",yytext);break;
+            default: printf("%s: unrecognisable.\n",yytext);break;
+        }
+    }
+}
+	YY_BREAK
+case 10:
+YY_RULE_SETUP
+#line 47 "symbolTable.l"
+; /*Ignore everything else*/
+	YY_BREAK
+case 11:
+YY_RULE_SETUP
+#line 48 "symbolTable.l"
 ECHO;
 	YY_BREAK
-#line 734 "lex.yy.c"
+#line 827 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1015,6 +1108,7 @@ static int yy_get_next_buffer (void)
 	char *yy_cp;
     
 	yy_current_state = (yy_start);
+	yy_current_state += YY_AT_BOL();
 
 	for ( yy_cp = (yytext_ptr) + YY_MORE_ADJ; yy_cp < (yy_c_buf_p); ++yy_cp )
 		{
@@ -1027,7 +1121,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 12 )
+			if ( yy_current_state >= 31 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1055,11 +1149,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 12 )
+		if ( yy_current_state >= 31 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 11);
+	yy_is_jam = (yy_current_state == 30);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1174,6 +1268,8 @@ static int yy_get_next_buffer (void)
 	c = *(unsigned char *) (yy_c_buf_p);	/* cast for 8-bit char's */
 	*(yy_c_buf_p) = '\0';	/* preserve yytext */
 	(yy_hold_char) = *++(yy_c_buf_p);
+
+	YY_CURRENT_BUFFER_LVALUE->yy_at_bol = (c == '\n');
 
 	return c;
 }
@@ -1735,9 +1831,41 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 6 "simple.l"
-
+#line 48 "symbolTable.l"
 
 main(){
     yylex();
 }
+
+struct word{
+    char *word_name;
+    int word_type;
+    struct word *next;
+};
+
+struct word *word_list;
+extern void *malloc();
+int add_word(int type, char *word){
+    struct word *wp;
+    if (lookup_word(word)!= LOOKUP){
+        printf("!!! warning: word %s already defined\n", word);
+        return 0;
+    }
+    wp = (struct word *) malloc(sizeof(struct word));
+    wp->next = word_list;
+    wp->word_name = (char *) malloc(strlen(word)+1);
+    strcpy(wp->word_name, word);
+    wp->word_type = type;
+    word_list = wp;
+    return 1;
+}
+
+int lookup_word(char *word){
+    struct word *wp = word_list;
+    for(; wp; wp = wp->next){
+        if(strcmp(wp->word_name, word) == 0)
+            return wp->word_type;
+    }
+    return LOOKUP;
+}
+

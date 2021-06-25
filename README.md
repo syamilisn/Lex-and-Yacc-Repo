@@ -16,3 +16,4 @@ NOTE: lncurses is used for curses.h in ubuntu as an alternative to conio.h heade
 #PROGRAMS:
 1. Simple program to copy standard input to output.
 2. Recognize if word is a VERB or not a VERB. (mind extra spaces in rules section)
+3. Word recognizer with symbol table.
